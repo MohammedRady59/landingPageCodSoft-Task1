@@ -7,7 +7,7 @@ function Layout({ children }) {
     <div>
       <Navbar />
 
-      {children}
+      <div style={{ marginTop: "16px" }}>{children}</div>
       <Footer />
     </div>
   );

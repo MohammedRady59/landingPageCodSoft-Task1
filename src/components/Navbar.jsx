@@ -1,5 +1,4 @@
 import icon from "../assets/Images/icon.png";
-import Logo from "../assets/Images/Nexcent.png";
 import {
   Box,
   Flex,
@@ -10,6 +9,7 @@ import {
   Stack,
   Image,
   Button,
+  Text,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
@@ -21,11 +21,12 @@ const NavLink = (props) => {
   return (
     <Box
       as="a"
-      fontSize={"17px"}
+      fontSize={{ base: "12px", md: "17px" }}
       px={2}
       py={1}
       fontWeight={"medium"}
-      rounded={"md"}
+      /*       w={"100px"}
+       */ rounded={"md"}
       _hover={{
         textDecoration: "none",
         bg: useColorModeValue("gray.200", "gray.700"),
@@ -42,7 +43,14 @@ export default function WithAction() {
 
   return (
     <>
-      <Box bg={useColorModeValue("gray.100", "gray.900")} px={40}>
+      <Box
+        position={"fixed"}
+        inset={0}
+        zIndex={40}
+        h={16}
+        bg={"white"}
+        px={{ base: 4, md: 10, lg: 30, xl: 40 }}
+      >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
             size={"md"}
@@ -53,11 +61,18 @@ export default function WithAction() {
           />
           <HStack spacing={8} alignItems={"center"}>
             <Flex alignItems={"center"} gap={2}>
-              <Image src={icon} w={"24px"} h={"17px"} />
-              <Image src={Logo} w={"78px"} h={"14px"} />
+              <Image src={icon} />
+              <Text fontWeight={"bold"} fontSize={{ base: "17px", md: "25px" }}>
+                Nextcent
+              </Text>
             </Flex>
           </HStack>
-          <HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }}>
+          <HStack
+            as={"nav"}
+            spacing={4}
+            display={{ base: "none", md: "flex" }}
+            alignItems={"center"}
+          >
             {Links.map((link) => (
               <NavLink key={link}>{link}</NavLink>
             ))}
