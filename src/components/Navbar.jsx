@@ -49,7 +49,7 @@ export default function WithAction() {
         zIndex={40}
         h={16}
         bg={"white"}
-        px={{ base: 4, md: 10, lg: 30, xl: 40 }}
+        px={{ base: 4, md: 2, lg: 20, xl: 40 }}
       >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton

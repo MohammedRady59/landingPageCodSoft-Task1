@@ -1,5 +1,6 @@
 import "./App.css";
 import Layout from "./Layout/Layout";
+import About from "./pages/About";
 import Community from "./pages/Community";
 import Design from "./pages/Design";
 import Home from "./pages/Home";
@@ -15,6 +16,7 @@ function App() {
         <Community />
         <Proudct />
         <Design />
+        <About />
       </Layout>
     </>
   );

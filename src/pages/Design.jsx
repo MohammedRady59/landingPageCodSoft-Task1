@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
-import photo from "../assets/Images/rafiki.svg";
+import photo from "../assets/Images/pana.svg";
 
 function Design() {
   return (
